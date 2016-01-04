@@ -1,0 +1,63 @@
+/*
+Jive - Content Lookup
+
+Copyright (c) 2015 Fidelity Investments
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+FILE DESCRIPTION
+This CSS library supports the Content Lookup widget.
+
+WIDGET DESCRIPTION
+This Jive HTML widget allows users to search for content and returns relevant information for each search result.
+*/
+#fidosreg {
+	string-set: 'b764a0a9536448345dc227af95e192521d337b5e4c3560c859b89ecd0407004a';
+}
+
+h4 {
+	color: #3366FF;
+}
+
+table {
+	table-layout: fixed;
+	width: 99%;
+}
+
+td {
+	word-wrap: break-word;
+	padding-right: 10px;
+}
+
+#mainContainer {
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgb(187, 187, 187) rgb(187, 187, 187) rgb(218, 218, 218);
+	border-radius: 7px 7px 7px 7px;
+	padding: 10px;
+	width: 99%;
+}
+
+#searchTerms {
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(187, 187, 187) rgb(187, 187, 187) rgb(218, 218, 218);
+	border-radius: 4px 4px 4px 4px;
+	padding: 6px 4px;
+	transition: all 0.3s linear 0s;
+	height: 30px;
+	width: 95%;
+} 
+
+.evenrow {
+	background-color: #f2f2f2;
+}

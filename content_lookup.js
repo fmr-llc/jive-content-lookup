@@ -1,4 +1,4 @@
-<!--
+/*
 Jive - Content Lookup
 
 Copyright (c) 2015 Fidelity Investments
@@ -15,19 +15,15 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 FILE DESCRIPTION
-This is the HTML widget code for the Content Lookup widget.
+This Javascript library supports the Content Lookup widget.
 
 WIDGET DESCRIPTION
-This Jive HTML widget allows users to search for content and returns relevant information for each result.
--->
-<meta name='fidosreg' content='b764a0a9536448345dc227af95e192521d337b5e4c3560c859b89ecd0407004a'>
+This Jive HTML widget allows users to search for content and returns relevant information for each search result.
+*/
 
-<script src='/resources/scripts/jquery/jquery.js'></script>
-<link rel="stylesheet" href='BOOTSTRAP CSS LiBRARY'>
-<script src='BOOTSTRAP JS LIBRARY'></script>
-
-<script>
+var fidosreg_id = 'b764a0a9536448345dc227af95e192521d337b5e4c3560c859b89ecd0407004a';
 var userID = -1;
+var $j = jQuery.noConflict();
 
 /*
  * Jive AJAX JSON return packets will all have a first line that makes it an invalid JSON packet.  This must be stripped off.
@@ -164,72 +160,3 @@ $j(document).ready(function() {
 	// Get the information for the current user
 	userID = window.parent._jive_current_user.ID;
 });
-</script>
-
-<style>
-h4 {
-	color: #3366FF;
-}
-
-table {
-	table-layout: fixed;
-	width: 99%;
-}
-
-td {
-	word-wrap: break-word;
-	padding-right: 10px;
-}
-
-#mainContainer {
-	border-width: 2px;
-	border-style: solid;
-	border-color: rgb(187, 187, 187) rgb(187, 187, 187) rgb(218, 218, 218);
-	border-radius: 7px 7px 7px 7px;
-	padding: 10px;
-	width: 99%;
-}
-
-#searchTerms {
-	border-width: 1px;
-	border-style: solid;
-	border-color: rgb(187, 187, 187) rgb(187, 187, 187) rgb(218, 218, 218);
-	border-radius: 4px 4px 4px 4px;
-	padding: 6px 4px;
-	transition: all 0.3s linear 0s;
-	height: 30px;
-	width: 95%;
-} 
-
-.evenrow {
-	background-color: #f2f2f2;
-}
-</style>
-
-<div id='mainContainer'>
-	<div id='searchTitle' class='page-header'> 
-		<h2>Content Lookup</h2> 
-	</div>
-		
-	<div id='getContent' style='display:block;'>
-		<div>
-			<input id='searchTerms' type='text' placeholder='Enter subjects, content, tags, etc. to search for'>
-			<br/>
-			<br/>
-			<label class="basicText checkbox-inline">
-				<input type="checkbox" name="author" id="author" value="author" checked>
-				Only show content where I am the author
-			</label>
-			<br/>
-			<label class="basicText checkbox-inline">
-				<input type="checkbox" name="limit" id="limit" value="limit" checked>
-				Limit to uploaded files
-			</label>
-			<br/>
-			<br/>
-			<Button id='search' class='btn btn-info btn-small' onclick="getContent(document.getElementById('searchTerms').value)">Search</Button> </input>
-		</div>
-	</div>
-		
-	<div id='content' class='content'></div>
-</div>
