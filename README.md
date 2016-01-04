@@ -228,4 +228,4 @@ License
 -------
 
 (c) 2015 Fidelity Investments
-Licensed under the Apache License, Version 2.0
+Licensed under the [Apache License](docs/LICENSE), Version 2.0
