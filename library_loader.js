@@ -47,6 +47,10 @@ var $j = jQuery.noConflict(); // Sets j to the new copy of jQuery, and $ is retu
 
 	libraries['bootstrap-theme.css'] = { contentID: '0' };
 	
+	libraries['content_viewer_widget.css'] = { contentID: '0' };
+	
+	libraries['content_viewer_widget.js'] = { contentID: '0' };
+	
 	libraries['export_widget.css'] = { contentID: '0' };
 	
 	libraries['export_widget.js'] = { contentID: '0' };
