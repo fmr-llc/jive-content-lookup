@@ -1,6 +1,8 @@
 Jive - Content Lookup
 =====================
 
+<img src="docs/content-lookup.jpg" />
+
 This widget is the starter widget in a series of releases that adds tremendous flexibiity for finding and displaying information on overview pages.  The Content Lookup widget is a handy tool for quickly locating content in your Jive community and obtaining various stats and reference information.  This is a [Jive-n](https://community.jivesoftware.com/welcome) HTML widget project that creates a self-service portal that allows users to more easily search for specific content and get pertinent information about it.  It utilizes the Jive V3 search API and presents a clean user interface using [Bootstrap](http://getbootstrap.com/).  In particular, this widget makes getting the content ID to uploaded files in the Jive instance much easier than doing API lookups in the browser and parsing the returned information for that level of detail.
 
 
@@ -24,46 +26,38 @@ Install Bootstrap
 5. Extract the zip file to your computer.
 6. Expand the bootstrap distribution folder.
 7. Expand the css folder.
-9. Log into your Jive community.
-10. Navigate to the upload location for your library files.
-11. Create an Uploaded File.  Drag the file "bootstrap.min.css" from your temp folder to the file section of the upload.  Set the file name to "Bootstrap CSS Library", put a description of your choosing, tag it with something agreeable to your community manager, and other options such as setting authors for controlling updates.  Make sure you are publishing it to the agreed upon Library location in your community.  Click Publish.
-12. Once published, right-click the Download link on the page, and copy the link address.
-13. Edit the "content_lookup.html" file in this repository.
-14. Find the line:
-
+8. Log into your Jive community.
+90. Navigate to the upload location for your library files.
+10. Create an Uploaded File.  Drag the file "bootstrap.min.css" from your temp folder to the file section of the upload.  Set the file name to "Bootstrap CSS Library", put a description of your choosing, tag it with something agreeable to your community manager, and other options such as setting authors for controlling updates.  Make sure you are publishing it to the agreed upon Library location in your community.  Click Publish.
+11. Once published, right-click the Download link on the page, and copy the link address.
+12. Edit the "content_lookup.html" file in this repository.
+13. Find the line:
 ```
     <link rel='stylesheet' href='BOOTSTRAP CSS LiBRARY'>
 ```
-replace the text inside the href quotes with the URL you copied in step 12.  It should end up looking similar to:
-
+replace the text inside the href quotes with the URL you copied in step 11.  It should end up looking similar to:
 ```
     <link rel='stylesheet' href='https://myjiveinstance.mycompany.com/servlet/JiveServlet/downloadBody/421109-102-2-1031405/bootstrap.min.css'>
 ```
-
-15. Create another Uploaded File in your Jive community.  Drag the file "bootstrap-theme.min.css" from your temp folder to the file section of the upload.  Set the file name to "Bootstrap Theme CSS Library", put a description of your choosing, tag it, set the authors, and make sure it is being published to the correct Library location.  Click Publish.  You will not need to do anything else with this file right now.
-16. Go back to the Bootstrap folder on your local computer and navigate back up a folder, and then expand the js folder.
-17. Create another Uploaded File for this library.  Drag the file "bootstrap.min.js" from your temp folder to the file section of the upload.  Set the file name to "Bootstrap JavaScript Library, put a description of your choosing, tag it, set the authors, and make sure it is being published to the correct Library location.  Click Publish.
-18. Once "bootstrap.min.js" is published, right-click the Download link on the page, and copy the link address.
-19. Edit the "content_lookup.html" file again and find the line:
-
+14. Create another Uploaded File in your Jive community.  Drag the file "bootstrap-theme.min.css" from your temp folder to the file section of the upload.  Set the file name to "Bootstrap Theme CSS Library", put a description of your choosing, tag it, set the authors, and make sure it is being published to the correct Library location.  Click Publish.  You will not need to do anything else with this file right now.
+15. Go back to the Bootstrap folder on your local computer and navigate back up a folder, and then expand the js folder.
+16. Create another Uploaded File for this library.  Drag the file "bootstrap.min.js" from your temp folder to the file section of the upload.  Set the file name to "Bootstrap JavaScript Library, put a description of your choosing, tag it, set the authors, and make sure it is being published to the correct Library location.  Click Publish.
+17. Once "bootstrap.min.js" is published, right-click the Download link on the page, and copy the link address.
+18. Edit the "content_lookup.html" file again and find the line:
 ```
     <script src='BOOTSTRAP JS LIBRARY'></script>
-
 ```
-
-replace the text inside the src quotes with the URL you copied in step 18.  It should end up looking similar to:
-
+replace the text inside the src quotes with the URL you copied in step 17.  It should end up looking similar to:
 ```
     <script src='https://myjiveinstance.mycompany.com/servlet/JiveServlet/downloadBody/421109-102-2-1031405/bootstrap.min.js'></script>
 ```
-
-20. Save the edits to "content_lookup.html"
-21. Go to the site you want to put the Content Lookup widget in your community, and go to the Overview page.
-22. Manage the Overview page, and drag a new HTML widget onto the page.
-23. Edit the new HTML Widget.
-24. Copy the updated code from "content_lookup.html" and paste it into the "Your HTML" entry field in the new widget.
-25. Click "Save Properties". 
-26. Click "Publish Layout".  Once published, you should have an operational Content Lookup widget.  Test it by entering "Bootstrap" in the search field, leave both checkboxes checked, and click Search.  It should come back with the three Bootstrap libraries you uploaded to your community above (and possibly more).  If not, check out [Issues](docs/issues.md)
+19. Save the edits to "content_lookup.html"
+20. Go to the site you want to put the Content Lookup widget in your community, and go to the Overview page.
+21. Manage the Overview page, and drag a new HTML widget onto the page.
+22. Edit the new HTML Widget.
+23. Copy the updated code from "content_lookup.html" and paste it into the "Your HTML" entry field in the new widget.
+24. Click "Save Properties". 
+25. Click "Publish Layout".  Once published, you should have an operational Content Lookup widget.  Test it by entering "Bootstrap" in the search field, leave both checkboxes checked, and click Search.  It should come back with the three Bootstrap libraries you uploaded to your community above (and possibly more).  If not, check out [Issues](docs/issues.md)
 
 Now that you have a working Content Lookup widget, we will use it to make life a bit easier for us going forward...
 
@@ -74,43 +68,31 @@ Install Library Loader
 1. Look at the "Bootstrap" search results (from step 26 in the previous section).  Find the line for "Bootstrap CSS Library" and make a copy of the Content ID.  It is the number in the second column, and should be something like "694220".
 2. Go back to the Content Lookup widget folder on your computer and edit the file "library_loader.js".
 3. Find the line for the bootstrap.css file:
-
 ```
 	libraries['bootstrap.css'] = { contentID: '0' };
 ```
-
 update the contentID with the value you copied in step 1.  It should end up looking similar to:
-
 ```
 	libraries['bootstrap.css'] = { contentID: '694220' };
 ```
-
 4. Go back to the Content Lookup search results.  Find the results for "Bootstrap Theme CSS Library" and make a copy of the Content ID.
 5. Update "library_loader.js" Find the line for the bootstrap-theme.css file:
-
 ```
 	libraries['bootstrap-theme.css'] = { contentID: '0' };
 ```
-
 update the contentID with the value you copied in step 4.  It should end up looking similar to:
-
 ```
 	libraries['bootstrap-theme.css'] = { contentID: '694221' };
 ```
-
 6. Go back to the Content Lookup search results.  Find the results for "Bootstrap JavaScript Library" and make a copy of the Content ID.
 7. Update "library_loader.js" Find the line for the bootstrap.js file:
-
 ```
 	libraries['bootstrap.js'] = { contentID: '0' };
 ```
-
 update the contentID with the value you copied in step 4.  It should end up looking similar to:
-
 ```
 	libraries['bootstrap.js'] = { contentID: '694222' };
 ```
-
 8. Save the edits to your "library_loader.js" file on your local computer.
 9. Create another Uploaded File in your Library File Location.  Drag the "library_loader.js" file from your computer to the file section of the upload.  Set the file name to "Library Loader", put a description of your choosing, tag it, set the authors, and make sure you are publishing it to the agreed upon Library location in your community.  Click Publish.
 10. Go back to the Content Lookup widget in your Jive community.  Search for "Library Loader".  Once it is returned in the search, proceed to the next installation section.
@@ -120,46 +102,35 @@ Use the Library Loader
 ----------------------
 
 1. Look at the Content Lookup search results from step 10 above.  On the "Library Loader" line, instead of copying the Content ID, this time we need to make a copy of the Binary URL.  It should look something like:
-
 ```
 	https://myjiveinstance.mycompany.com/api/core/v3/attachments/file/694223/data
 ```
-
 2. Edit the file "content_lookup.html" on your local computer again.
 3. Delete the line line for the bootstrp.min.css you edited earlier.  It looks similar to:
-
 ```
     <link rel='stylesheet' href='https://myjiveinstance.mycompany.com/servlet/JiveServlet/downloadBody/421109-102-2-1031405/bootstrap.min.css'>
 ```
-
 Completely remove that line.
 
 4. Change the src URL in the next line to the value you copied in step 1:  It should change from looking similar to:
-
 ```
     <script src='https://myjiveinstance.mycompany.com/servlet/JiveServlet/downloadBody/421109-102-2-1031405/bootstrap.min.js'></script>
 ```
-
 to something similar to:
-
 ```
     <script src='https://myjiveinstance.mycompany.com/api/core/v3/attachments/file/694223/data'></script>
 ```
-
 5. Paste the following code directly beneath that line:
-
 ```
 	<script>
 	$j.load_library('bootstrap.css');
 	$j.load_library('bootstrap.js');
 	</script>
 ```
-
 the top of the code should now look similar to:
-
 ```
 	<meta name='fidosreg' content='b764a0a9536448345dc227af95e192521d337b5e4c3560c859b89ecd0407004a'>
-
+	
 	<script src='/resources/scripts/jquery/jquery.js'></script>
     <script src='https://myjiveinstance.mycompany.com/api/core/v3/attachments/file/694223/data'></script>
 	<script>
@@ -167,7 +138,6 @@ the top of the code should now look similar to:
 	$j.load_library('bootstrap.js');
 	</script>
 ```
-
 6. Save the changes to "content_lookup.html"
 7. Copy the code to update the widget in your community.
 8. Go to the Content Lookup widget page in your Jive community.
@@ -194,25 +164,19 @@ Jive includes a version of jQuery in its installation, which the widget uses by 
 7. Create an Uploaded File.  Drag the downloaded jQuery library file (it should be something like "jquery-1.11.3.min.js") from your download folder to the file section of the upload.  Set the file name to "jQuery Library", put a description of your choosing, tag it with something agreeable to your community manager, and other options such as setting authors for controlling updates.  Make sure you are publishing it to the agreed upon Library location in your community.  Click Publish.
 8. Once published, go to your Content Lookup widget page and search for "jQuery Library".
 9. Copy the returned Binary URL.  It should look similar to:
-
 ```
 	https://myjiveinstance.mycompany.com/api/core/v3/attachments/file/694224/data
 ```
-
 10. Edit the "content_lookup.html" file in this repository.
 11. Find the line:
-
 ```
     <script src='/resources/scripts/jquery/jquery.js'></script>
 ```
-
 replace the text inside the src quotes with the URL you copied in step 9.  It should end up looking similar to:
-
 ```
     <script src='https://myjiveinstance.mycompany.com/api/core/v3/attachments/file/694224/data'></script>
 ```
 the top of the code should end up looking similar to:
-
 ```
 	<meta name='fidosreg' content='b764a0a9536448345dc227af95e192521d337b5e4c3560c859b89ecd0407004a'>
 
@@ -223,7 +187,6 @@ the top of the code should end up looking similar to:
 	$j.load_library('bootstrap.js');
 	</script>
 ```
-
 12. Save the edits to your "content_lookup.html" file on your local computer.
 13. Copy the code in the file "content_lookup.html".
 14. Go to the Content Lookup widget page.
@@ -267,16 +230,16 @@ If your widget is not working as expected, please check out [Issues](docs/issues
 Additional Jive-n widget projects in this series
 ------------------------------------------------
 
-[Accordion widget](https://github.com/fmr-llc/jive-accordion)
-[Content Viewer widget](https://github.com/fmr-llc/jive-content-viewer)
-[Export widget](https://github.com/fmr-llc/jive-export-followers)
-[Form widget](https://github.com/fmr-llc/jive-form)
-[Form Report widget](https://github.com/fmr-llc/jive-form-report)
-[Menu Bar widget](https://github.com/fmr-llc/jive-menu)
-[Picture Carousel widget](https://github.com/fmr-llc/jive-picture-carousel)
-[Presentation widget](https://github.com/fmr-llc/jive-presentation)
-[Search widget](https://github.com/fmr-llc/jive-advanced-search)
-[Team Listing widget](www.github.com/fmr-llc/jive-team-listing)
+* [Accordion widget](https://github.com/fmr-llc/jive-accordion)
+* [Content Viewer widget](https://github.com/fmr-llc/jive-content-viewer)
+* [Export widget](https://github.com/fmr-llc/jive-export-followers)
+* [Form widget](https://github.com/fmr-llc/jive-form)
+* [Form Report widget](https://github.com/fmr-llc/jive-form-report)
+* [Menu Bar widget](https://github.com/fmr-llc/jive-menu)
+* [Picture Carousel widget](https://github.com/fmr-llc/jive-picture-carousel)
+* [Presentation widget](https://github.com/fmr-llc/jive-presentation)
+* [Search widget](https://github.com/fmr-llc/jive-advanced-search)
+* [Team Listing widget](www.github.com/fmr-llc/jive-team-listing)
 
 
 Contributing
