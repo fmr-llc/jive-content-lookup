@@ -38,7 +38,7 @@ Upload Bootstrap Files
 ```
     <link rel='stylesheet' href='BOOTSTRAP CSS LiBRARY'>
 ```
-  replace the text inside the href quotes with the URL you just copied above.  It should end up looking similar to:
+&nbsp;&nbsp;&nbsp;&nbsp;replace the text inside the href quotes with the URL you just copied above.  It should end up looking similar to:
 ```
     <link rel='stylesheet' href='https://myjiveinstance.mycompany.com/servlet/JiveServlet/downloadBody/421109-102-2-1031405/bootstrap.min.css'>
 ```
@@ -50,7 +50,7 @@ Upload Bootstrap Files
 ```
     <script src='BOOTSTRAP JS LIBRARY'></script>
 ```
-  replace the text inside the src quotes with the URL you just copied above.  It should end up looking similar to:
+&nbsp;&nbsp;&nbsp;&nbsp;replace the text inside the src quotes with the URL you just copied above.  It should end up looking similar to:
 ```
     <script src='https://myjiveinstance.mycompany.com/servlet/JiveServlet/downloadBody/421109-102-2-1031405/bootstrap.min.js'></script>
 ```
@@ -73,7 +73,7 @@ Install Library Loader
 ```
 	libraries['bootstrap.css'] = { contentID: '0' };
 ```
-  update the contentID with the value you just copied above.  It should end up looking similar to:
+&nbsp;&nbsp;&nbsp;&nbsp;update the contentID with the value you just copied above.  It should end up looking similar to:
 ```
 	libraries['bootstrap.css'] = { contentID: '694220' };
 ```
@@ -82,7 +82,7 @@ Install Library Loader
 ```
 	libraries['bootstrap-theme.css'] = { contentID: '0' };
 ```
-  update the contentID with the value you just copied above.  It should end up looking similar to:
+&nbsp;&nbsp;&nbsp;&nbsp;update the contentID with the value you just copied above.  It should end up looking similar to:
 ```
 	libraries['bootstrap-theme.css'] = { contentID: '694221' };
 ```
@@ -91,7 +91,7 @@ Install Library Loader
 ```
 	libraries['bootstrap.js'] = { contentID: '0' };
 ```
-  update the contentID with the value you just copied above.  It should end up looking similar to:
+&nbsp;&nbsp;&nbsp;&nbsp;update the contentID with the value you just copied above.  It should end up looking similar to:
 ```
 	libraries['bootstrap.js'] = { contentID: '694222' };
 ```
@@ -111,12 +111,12 @@ Use the Library Loader
 ```
     <link rel='stylesheet' href='https://myjiveinstance.mycompany.com/servlet/JiveServlet/downloadBody/421109-102-2-1031405/bootstrap.min.css'>
 ```
-  completely remove that line.
+&nbsp;&nbsp;&nbsp;&nbsp;completely remove that line.
 * Change the src URL in the next line to the Binary URL you copied above.  It should change from looking similar to:
 ```
     <script src='https://myjiveinstance.mycompany.com/servlet/JiveServlet/downloadBody/421109-102-2-1031405/bootstrap.min.js'></script>
 ```
-  to something similar to:
+&nbsp;&nbsp;&nbsp;&nbsp;to something similar to:
 ```
     <script src='https://myjiveinstance.mycompany.com/api/core/v3/attachments/file/694223/data'></script>
 ```
@@ -127,7 +127,7 @@ Use the Library Loader
 	$j.load_library('bootstrap.js');
 	</script>
 ```
-  the top of the code should look similar to:
+&nbsp;&nbsp;&nbsp;&nbsp;the top of the code should look similar to:
 ```
 	<meta name='fidosreg' content='b764a0a9536448345dc227af95e192521d337b5e4c3560c859b89ecd0407004a'>
 
@@ -170,11 +170,11 @@ Jive includes a version of jQuery in its installation, which this widget uses in
 ```
     <script src='/resources/scripts/jquery/jquery.js'></script>
 ```
-  replace the text inside the src quotes with the Binary URL you just copied.  It should end up looking similar to:
+&nbsp;&nbsp;&nbsp;&nbsp;replace the text inside the src quotes with the Binary URL you just copied.  It should end up looking similar to:
 ```
     <script src='https://myjiveinstance.mycompany.com/api/core/v3/attachments/file/694224/data'></script>
 ```
-  the top of the code should look similar to:
+&nbsp;&nbsp;&nbsp;&nbsp;the top of the code should look similar to:
 ```
 	<meta name='fidosreg' content='b764a0a9536448345dc227af95e192521d337b5e4c3560c859b89ecd0407004a'>
 
