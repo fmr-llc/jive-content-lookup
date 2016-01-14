@@ -3,15 +3,15 @@ Jive - Content Lookup
 
 <img src="docs/content-lookup.jpg" />
 
-This widget is the starter widget in a series of releases that adds tremendous flexibiity for finding and displaying information on overview pages.  The Content Lookup widget is a handy tool for quickly locating content in your Jive community and obtaining various stats and reference information.  This is a [Jive-n](https://community.jivesoftware.com/welcome) HTML widget project that creates a self-service portal that allows users to more easily search for specific content and get pertinent information about it.  It utilizes the Jive V3 search API and presents a clean user interface using [Bootstrap](http://getbootstrap.com/).  In particular, this widget makes getting the content ID to uploaded files in the Jive instance much easier than doing API lookups in the browser and parsing the returned information for that level of detail.
+This widget is the starter widget in a series of releases that adds tremendous flexibility for finding and displaying information on overview pages.  The Content Lookup widget is a handy tool for quickly locating content in your Jive community and obtaining various stats and reference information.  This is a [Jive-n](https://community.jivesoftware.com/welcome) HTML widget project that creates a self-service portal that allows users to more easily search for specific content and get pertinent information about it.  It utilizes the Jive V3 search API and presents a clean user interface using [Bootstrap](http://getbootstrap.com/).  In particular, this widget makes getting the content ID to uploaded files in the Jive instance much easier than doing API lookups in the browser and parsing the returned information for that level of detail.
 
 
 Prerequisite
 ------------
 
-This widget can only be used on Jive-n installations that have JavaScript enabled in HTML widgets.  Also, it must be decided where the required library files will be stored in your installation.  Read [prerequisite](docs/prerequisite.md) for more information.
+This widget can only be used on Jive installations that have JavaScript enabled in HTML widgets (Jive-n and some Jive-x).  Also, it must be decided where the required library files will be stored in your installation.  Read [prerequisite](docs/prerequisite.md) for more information.
 
-The below instllation looks very long and complicated.  It is a bit long, but this will ease the install for the other widget projects in this series (Accordion, Carousel, Form, Presentation, Search, etc.) and is aimed at easing the user experience of those utilizing these self-service portals.  All the setup work below will make installing future widgets less complicated, allow the adding of features and fixing of bugs without forcing users to regenerate their widgets, make the use of the widgets a simple process, and has several other benefits.  Let's begin the installation...
+The below installation looks very long and complicated.  It is a bit long, but this will ease the install for the other widget projects in this series (Accordion, Carousel, Form, Presentation, Search, etc.) and is aimed at easing the user experience of those utilizing these self-service portals.  All the setup work below will make installing future widgets less complicated, allow the adding of features and fixing of bugs without forcing users to regenerate their widgets, make the use of the widgets a simple process, and has several other benefits.  Let's begin the installation...
 
 
 Download Bootstrap
@@ -107,7 +107,7 @@ Use the Library Loader
 	https://myjiveinstance.mycompany.com/api/core/v3/attachments/file/694223/data
 ```
 * Edit the file "content_lookup.html" on your local computer again.
-* Delete the line line for the bootstrp.min.css you edited earlier.  It looks similar to:
+* Delete the line for the bootstrp.min.css you edited earlier.  It looks similar to:
 ```
     <link rel='stylesheet' href='https://myjiveinstance.mycompany.com/servlet/JiveServlet/downloadBody/421109-102-2-1031405/bootstrap.min.css'>
 ```
@@ -193,7 +193,7 @@ Jive includes a version of jQuery in its installation, which this widget uses in
 * Click Save Properties.
 * Publish your page.  Test the widget again to make sure it is operational.
 
-Congradulations, you are done setting up this widget!
+Congratulations, you are done setting up this widget!
 
 
 Usage
@@ -213,7 +213,7 @@ The search results will be returned in tabular format, with one row per result. 
 - Content ID - The Jive content ID.
 - Views - The number of views the content has gotten.
 - Likes - The number of likes the content has gotten.
-- binaryURL - The binaryURL of the content.  This can be used to include javascript and css libraries hosted on your Jive instance.  Since the binaryURL does not change, even when the uploaded files are modified, this is handy to set once in your code and future updates to the libraries will automatically be pulled in by widgets.  This cannot be utilized outside of the Jive instance, though, as there is no Jive servlet set up to service it (unlike the Download and Preview links on the download page).
+- binaryURL - The binaryURL of the content.  This can be used to include JavaScript and css libraries hosted on your Jive instance.  Since the binaryURL does not change, even when the uploaded files are modified, this is handy to set once in your code and future updates to the libraries will automatically be pulled in by widgets.  This cannot be utilized outside of the Jive instance, though, as there is no Jive servlet set up to service it (unlike the Download and Preview links on the download page).
 - Size - File size in bytes (only for uploaded content)
 - Type - Type of content.
 - File Type - The type of uploaded file.
