@@ -14,6 +14,12 @@ Jive disables JavaScript from HTML widgets by default.  This is a security measu
 If this property is set to "true", then all script and style tags are removed from the HTML widgets on save.  You should be familiar with cross site scripting attacks, and evaluate the risk of enabling scripting on your site prior to setting the setting to "false".
 
 
+Scan this archive
+-----------------
+
+If your company requires code obtained from untrusted sources to be scanned before use, you should give this archive to them now to have it scanned before proceeding.
+
+
 Determine Library File Location
 -------------------------------
 
