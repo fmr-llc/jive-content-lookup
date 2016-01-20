@@ -71,6 +71,8 @@ var $j = jQuery.noConflict(); // Sets j to the new copy of jQuery, and $ is retu
 	
 	libraries['form_report_widget.js'] = { contentID: '0' };
 	
+	libraries['jquery-placeholder.js'] = { contentID: '0' };
+
 	libraries['jscolor.js'] = { contentID: '0' };
 
 	libraries['menu_builder.css'] = { contentID: '0' };
