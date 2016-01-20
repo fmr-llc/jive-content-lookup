@@ -8,7 +8,6 @@ This widget is the starter widget in a series of releases that adds tremendous f
 
 Prerequisite
 ------------
-
 This widget can only be used on Jive installations that have JavaScript enabled in HTML widgets (Jive-n and some Jive-x).  Also, it must be decided where the required library files will be stored in your installation.  Read [prerequisite](docs/prerequisite.md) for more information.
 
 The below installation looks very long and complicated.  It is a bit long, but this will ease the install for the other widget projects in this series (Accordion, Carousel, Form, Presentation, Search, etc.) and is aimed at easing the user experience of those utilizing these self-service portals.  All the setup work below will make installing future widgets less complicated, allow the adding of features and fixing of bugs without forcing users to regenerate their widgets, make the use of the widgets a simple process, and has several other benefits.  Let's begin the installation...
@@ -16,7 +15,6 @@ The below installation looks very long and complicated.  It is a bit long, but t
 
 Download Bootstrap
 ------------------
-
 [Bootstrap](http://getbootstrap.com/) is a library that this widget series use for the user interface.  You need to obtain a copy of this library and store specific files in your Jive instance for use.  Follow these instructions to download the latest version and upload to your community:
 
 * Go to [Bootstrap](http://getbootstrap.com/) or use a version used by your front end developers and skip to step 5.
@@ -198,7 +196,6 @@ Congratulations, you are done setting up this widget!
 
 Usage
 -----
-
 Users can now search for content by doing ther following:
 
 1. In the entry field, specify search criteria to narrow down the search to the intended content in your Jive instance.  The criteria entered can be terms from the subject, content, tags, etc.  This widget uses the Jive V3 search API, so the normal search rules from the search screen in Jive apply here.
@@ -221,13 +218,11 @@ The search results will be returned in tabular format, with one row per result. 
 
 Issues
 ------
-
 If your widget is not working as expected, please check out [Issues](docs/issues.md)
 
 
 Additional Jive-n widget projects in this series
 ------------------------------------------------
-
 * [Accordion widget](https://github.com/fmr-llc/jive-accordion)
 * [Content Viewer widget](https://github.com/fmr-llc/jive-content-viewer)
 * [Export widget](https://github.com/fmr-llc/jive-export-followers)
@@ -242,12 +237,10 @@ Additional Jive-n widget projects in this series
 
 Contributing
 ------------
-
 If you would like to contribute to this project, please check out [Contributing](docs/contributing.md)
 
 
 License
 -------
-
-(c) 2015 Fidelity Investments
+(c) 2015-2016 Fidelity Investments
 Licensed under the [Apache License](docs/LICENSE), Version 2.0
