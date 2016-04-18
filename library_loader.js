@@ -1,7 +1,7 @@
 /*
 Jive - Include Library
 
-Copyright (c) 2015 Fidelity Investments
+Copyright (c) 2015-2016 Fidelity Investments
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -47,9 +47,17 @@ var $j = jQuery.noConflict(); // Sets j to the new copy of jQuery, and $ is retu
 
 	libraries['bootstrap-theme.css'] = { contentID: '0' };
 	
+	libraries['content_lookup.css'] = { contentID: '0' };
+	
+	libraries['content_lookup.js'] = { contentID: '0' };
+	
 	libraries['content_viewer_widget.css'] = { contentID: '0' };
 	
 	libraries['content_viewer_widget.js'] = { contentID: '0' };
+	
+	libraries['content_viewer_widget_builder.css'] = { contentID: '0' };
+	
+	libraries['content_viewer_widget_builder.js'] = { contentID: '0' };
 	
 	libraries['export_widget.css'] = { contentID: '0' };
 	
@@ -73,15 +81,9 @@ var $j = jQuery.noConflict(); // Sets j to the new copy of jQuery, and $ is retu
 	
 	libraries['jquery-placeholder.js'] = { contentID: '0' };
 
-	libraries['jscolor.js'] = { contentID: '0' };
-
 	libraries['menu_builder.css'] = { contentID: '0' };
 	
 	libraries['menu_builder.js'] = { contentID: '0' };
-	
-	libraries['menu.css'] = { contentID: '0' };
-	
-	libraries['menu.js'] = { contentID: '0' };
 	
 	libraries['nav_bar_builder.css'] = { contentID: '0' };
 	
@@ -107,6 +109,8 @@ var $j = jQuery.noConflict(); // Sets j to the new copy of jQuery, and $ is retu
 	
 	libraries['presentation_widget.js'] = { contentID: '0' };
 	
+	libraries['reveal.css'] = { contentID: '0' };
+	
 	libraries['reveal.js'] = { contentID: '0' };
 	
 	libraries['search_widget_builder.css'] = { contentID: '0' };
@@ -116,6 +120,10 @@ var $j = jQuery.noConflict(); // Sets j to the new copy of jQuery, and $ is retu
 	libraries['search_widget.css'] = { contentID: '0' };
 	
 	libraries['search_widget.js'] = { contentID: '0' };
+	
+	libraries['spectrum.css'] = { contentID: '0' };
+	
+	libraries['spectrum.js'] = { contentID: '0' };
 	
 	libraries['team_listing_widget_builder.css'] = { contentID: '0' };
 	

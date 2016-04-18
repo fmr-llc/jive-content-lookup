@@ -149,7 +149,7 @@ Make sure the widget works using the Library Loader changes by searching for "Bo
 
 Install jQuery
 --------------
-Jive includes a version of jQuery in its installation, which this widget uses initially, but the version Jive includes is too old to be used with the newer JavaScript libraries (like the latest Bootstrap).  While the Content Lookup widget should basically work with the included jQuery, many widgets will error out and not work.  We need to put a newer version of the library in the Jive instance to be used by these widget projects.  Follow these instructions to download the latest version, upload it, and modify the code to use it:
+Jive includes a version of jQuery in its installation, which this widget uses initially, but the version Jive includes may be too old to be used with the newer JavaScript libraries (like the latest Bootstrap).  While the Content Lookup widget should basically work with the included jQuery, many widgets will error out and not work.  We need to put a newer version of the library in the Jive instance to be used by these widget projects.  If you are knowledgeable about the library versions on your Jive instance, and know that your jQuery version is a late enough version, then it is assumed you can leave the to include the version already in your instance.  Otherwise, follow these instructions to download the latest version, upload it, and modify the code to use it:
 
 * Go to [jQuery](https://jquery.com/download/) or use a version used by your front end developers.
 * Click one of the "Download the compressed, production jQuery" links.  As of this writing, version 1.11.3 was the latest that supported IE8.  If you do not need that support, you can opt for jQuery 2.X
