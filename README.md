@@ -42,7 +42,7 @@ Upload Bootstrap Files
 ```
 * Create another Uploaded File in your Jive community.  Drag the file "bootstrap-theme.min.css" from your temp folder to the file section of the upload.  Set the file name to "Bootstrap Theme CSS Library", put a description of your choosing, tag it, set the authors, and make sure it is being published to the correct Library location.  Click Publish.  You will not need to do anything else with this file right now.
 * Go back to the Bootstrap folder on your local computer and navigate back up a folder, and then expand the js folder.
-* Create another Uploaded File for this library.  Drag the file "bootstrap.min.js" from your temp folder to the file section of the upload.  Set the file name to "Bootstrap JavaScript Library, put a description of your choosing, tag it, set the authors, and make sure it is being published to the correct Library location.  Click Publish.
+* Create another Uploaded File for this library.  Drag the file "bootstrap.min.js" from your temp folder to the file section of the upload.  Set the file name to "Bootstrap JavaScript Library", put a description of your choosing, tag it, set the authors, and make sure it is being published to the correct Library location.  Click Publish.
 * Once "bootstrap.min.js" is published, right-click the Download link on the page, and copy the link address.
 * Edit the "content_lookup.html" file again and find the line:
 ```
@@ -149,15 +149,15 @@ Make sure the widget works using the Library Loader changes by searching for "Bo
 
 Install jQuery
 --------------
-Jive includes a version of jQuery in its installation, which this widget uses initially, but the version Jive includes may be too old to be used with the newer JavaScript libraries (like the latest Bootstrap).  While the Content Lookup widget should basically work with the included jQuery, many widgets will error out and not work.  We need to put a newer version of the library in the Jive instance to be used by these widget projects.  If you are knowledgeable about the library versions on your Jive instance, and know that your jQuery version is a late enough version, then it is assumed you can leave the to include the version already in your instance.  Otherwise, follow these instructions to download the latest version, upload it, and modify the code to use it:
+Jive includes a version of jQuery in its installation, which this widget uses initially, but the version Jive includes may be too old to be used with the newer JavaScript libraries (like the latest Bootstrap).  While the Content Lookup widget should basically work with the included jQuery, many widgets will error out and not work.  We need to put a newer version of the library in the Jive instance to be used by these widget projects.  If you are knowledgeable about the library versions on your Jive instance, and know that your jQuery version is a late enough version, then it is assumed you can leave the included version already in your instance.  Otherwise, follow these instructions to download a compatible version, upload the file into your Jive instance, and modify the widget code to use it:
 
-* Go to [jQuery](https://jquery.com/download/) or use a version used by your front end developers.
-* Click one of the "Download the compressed, production jQuery" links.  As of this writing, version 1.11.3 was the latest that supported IE8.  If you do not need that support, you can opt for jQuery 2.X
-* The jQuery JavaScript library file will be downloaded to you.
+* Right click this link -> [jQuery](https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js)
+* Select "Save Target as" or "Save Link as" (depending on browser)
+* Save the file to your local computer.
 * (Optional) Perform any required security checks on the downloaded code.
 * Log into your Jive community.
 * Navigate to the upload location for your library files.
-* Create an Uploaded File.  Drag the downloaded jQuery library file (it should be something like "jquery-1.11.3.min.js") from your download folder to the file section of the upload.  Set the file name to "jQuery Library", put a description of your choosing, tag it with something agreeable to your community manager, and other options such as setting authors for controlling updates.  Make sure you are publishing it to the agreed upon Library location in your community.  Click Publish.
+* Create an Uploaded File.  Drag the downloaded jQuery library file from your download folder to the file section of the upload.  Set the file name to "jQuery Library", put a description of your choosing, tag it with something agreeable to your community manager, and other options such as setting authors for controlling updates.  Make sure you are publishing it to the agreed upon Library location in your community.  Click Publish.
 * Once published, go to your Content Lookup widget page and search for "jQuery Library".
 * Copy the returned Binary URL.  It should look similar to:
 ```
